@@ -10,7 +10,7 @@
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 24px;
     color: #edf0f1;
     text-decoration: none;
 }
@@ -19,13 +19,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 30px;
+    padding: 30px 40px;
 }
 
 .logo {
     font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 32px;
+    font-weight: 800;
+    font-size: 54px;
     color: #edf0f1;
     text-decoration: none;
     cursor: pointer;

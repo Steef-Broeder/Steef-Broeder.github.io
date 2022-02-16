@@ -7,6 +7,8 @@
     background-color: #24252A;
 }
 
+/*HEADER*/
+
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -19,7 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 30px;
+    padding: 30px 6%;
 }
 
 .logo {
@@ -40,3 +42,26 @@ header {
     padding: 0px 20px;
 }
 
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #0088a9;
+}
+
+button { 
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+
+/*HEADER END*/
+/*...*/

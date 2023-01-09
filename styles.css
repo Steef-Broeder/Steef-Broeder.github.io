@@ -17,7 +17,7 @@ h1 {
     padding-left: 50px;
 }
 
-p, i {
+p, blockquote {
     font-family: "Montserrat", sans-serif;
     font-weight: normal;
     font-size: 24px;
@@ -25,11 +25,4 @@ p, i {
     text-decoration: none;
     padding-top: 0px;
     padding-left: 50px;
-}
-
-.icons {
-    padding-top: 0px;
-    margin-left: 50px;
-    width:60px;
-    height:60px;
 }

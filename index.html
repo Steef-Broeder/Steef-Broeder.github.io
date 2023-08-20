@@ -10,11 +10,33 @@
 </head>
 
 <body>
-    <h1>Steef Broeder</h1>
-    <i>"Wat"</i>
-    <p>Jelle Lansu | 2023</p>
-    <i>"Oerknal"</i>
-    <p>Devorah Yazvin | 2023</p>
+    <h1>Text Input Example</h1>
+    <label for="inputText">Enter Text:</label>
+    <input type="text" id="inputText">
+    <button id="addButton">Add Text</button>
+    <h2>Contents:</h2>
+    <div id="contents"></div>
+
+    <script>
+        const inputElement = document.getElementById("inputText");
+        const addButton = document.getElementById("addButton");
+        const contentsDiv = document.getElementById("contents");
+
+        // Load existing contents from local storage
+        const existingContents = localStorage.getItem("textContents") || "";
+        contentsDiv.textContent = existingContents;
+
+        addButton.addEventListener("click", function() {
+            const newText = inputElement.value;
+            if (newText.trim() !== "") {
+                const currentContents = contentsDiv.textContent;
+                const updatedContents = currentContents + newText + "\n";
+                contentsDiv.textContent = updatedContents;
+                localStorage.setItem("textContents", updatedContents);
+                inputElement.value = "";
+            }
+        });
+    </script>
 </body>
 
 </html>

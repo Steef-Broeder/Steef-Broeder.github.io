@@ -39,19 +39,13 @@ img {
 }
 
 .header {
-    display: flex;
-    align-items: center;
+    margin-bottom: 0;
 }
 
-.title {
-    flex: 4;
-}
-
-.header-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    flex: 1;
+.author {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .image-container {

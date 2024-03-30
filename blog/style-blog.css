@@ -43,31 +43,21 @@ img {
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
-.title {
-    flex: 4;
-}
-
-.header-info {
-    color: #F60A20;
+.author {
     font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    flex: 1;
+    margin-top: 0;
+    margin-bottom: 0;
 }
-
-
 
 .panel {
     background-color: #cfcecf;
     border-radius: 10px;
     transition: background-color 0.2s ease;
-    margin: 10px;
+    margin-bottom: 10px;
+
 }
 
 .panel h2 {

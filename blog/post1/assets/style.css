@@ -1,0 +1,120 @@
+body {
+    background-color: #cfcecf;
+    color: #265672;
+    font-family: "Futura", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    height: 100%; /* or any custom height */
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 50vh;
+} 
+
+h1 {
+    font-size: 4.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+img {
+    border-radius: 15px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    flex: 4;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 4px solid #1E2B33;
+    border-radius: 15px;
+}
+
+.image-container img,
+.image-container video {
+    max-width: 50%;
+    border-radius: 15px;
+}
+
+/* Media query for screen width below 600px */
+@media screen and (max-width: 600px) {
+
+    .image-container img,
+    .image-container video {
+        max-width: 95%;
+    }
+}
+
+/* LINKS */
+/* unvisited link */
+a:link {
+    color: #732629;
+}
+
+/* visited link */
+a:visited {
+    color: #265672;
+}
+
+/* mouse over link */
+a:hover {
+    color: #712673;
+}
+
+/* selected link */
+a:active {
+    color: #265672;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #265672;
+}

@@ -1,0 +1,106 @@
+body {
+    background-color: #A4A4A4;
+    color: #002732;
+    font-family: "Futura", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    height: 100%; /* or any custom height */
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 50vh;
+} 
+
+h1 {
+    font-size: 4.5em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border-radius: 15px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    flex: 4;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.panel-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Optional: if you want space between the panels */
+    max-width: 100%;
+}
+
+.panel {
+    background-color: #cfcecf;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.panel h2 {
+    padding: 6px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    padding: 6px;
+}
+
+.image-container img,
+.image-container video {
+    border-radius: 15px;
+    width: 100%;
+}
+
+/* Media query for screen width below 600px */
+@media screen and (max-width: 600px) {
+
+    .image-container img,
+    .image-container video {
+        max-width: 95%;
+    }
+}
+
+#post1.panel {
+    color: #265672;
+}
+#post1.panel:hover {
+    background-color: #265672; /* Change to the color you want */
+}

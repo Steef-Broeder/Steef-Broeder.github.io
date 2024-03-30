@@ -61,17 +61,13 @@ img {
     flex: 1;
 }
 
-.panel-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Optional: if you want space between the panels */
-    max-width: 100%;
-}
+
 
 .panel {
     background-color: #cfcecf;
     border-radius: 10px;
     transition: background-color 0.2s ease;
+    margin: 10px;
 }
 
 .panel h2 {
@@ -93,7 +89,7 @@ img {
 }
 
 /* Media query for screen width below 600px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
 
     .image-container img,
     .image-container video {

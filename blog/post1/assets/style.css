@@ -69,7 +69,7 @@ img {
 }
 
 /* Media query for screen width below 600px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
 
     .image-container img,
     .image-container video {

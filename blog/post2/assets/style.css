@@ -63,6 +63,15 @@ img {
     width: 100%;    
 }
 
+/* Media query for screen width below 600px */
+@media screen and (max-width: 1000px) {
+
+    .image-container img,
+    .image-container video {
+        max-width: 95%;
+    }
+}
+
 /* LINKS */
 /* unvisited link */
 a:link {

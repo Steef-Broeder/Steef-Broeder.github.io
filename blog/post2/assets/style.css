@@ -1,0 +1,106 @@
+body {
+    background-color: #F5E7D3;
+    color: #DB6816;
+    font-family: "Futura", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    height: 100%; /* or any custom height */
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 50vh;
+} 
+
+h1 {
+    font-size: 4.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+img {
+    border-radius: 15px;
+}
+
+.header {
+    margin-bottom: 0;
+}
+
+.author {
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 4px solid #1E2B33;
+    border-radius: 15px;
+    width: 40%;
+}
+
+.image-container img,
+.image-container video {
+    border-radius: 15px;
+    width: 100%;    
+}
+
+/* LINKS */
+/* unvisited link */
+a:link {
+    color: #732629;
+}
+
+/* visited link */
+a:visited {
+    color: #DB6816;
+}
+
+/* mouse over link */
+a:hover {
+    color: #712673;
+}
+
+/* selected link */
+a:active {
+    color: #DB6816;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #DB6816;
+}

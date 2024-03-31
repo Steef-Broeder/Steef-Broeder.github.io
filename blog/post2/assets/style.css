@@ -54,7 +54,7 @@ img {
     flex-wrap: wrap;
     border: 4px solid #1E2B33;
     border-radius: 15px;
-    width: 40%;
+    max-width: 60vh;
 }
 
 .image-container img,

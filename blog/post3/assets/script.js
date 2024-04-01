@@ -1,76 +1,82 @@
-const colors = ["#FFFFFF"];
-const numBalls = 40;
-const balls = [];
-
-// Function to get a random number within a range
-function getRandom(min, max) {
+// Function to generate a random number between min and max
+function getRandomNumber(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-// Function to create a ball element
-function createBall() {
-    const ball = document.createElement("div");
-    ball.classList.add("ball");
-    ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-    
-    const ballSize = getRandom(100, 30); // Random size between 10 and 20 pixels
-    ball.style.width = `${ballSize}px`;
-    ball.style.height = `${ballSize}px`;
+// Function to create a floating ball
+function createFloatingBall() {
+    const ball = document.createElement('div');
+    ball.classList.add('ball');
+    const diameter = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
+    ball.style.width = `${getRandomNumber(diameter - 50, diameter + 50)}px`; // Random width
+    ball.style.height = ball.style.width; // Make it circular
+    ball.style.background = 'rgba(255, 255, 255, 0.3)'; // Set the background color to white with 50% transparency
+    ball.style.left = `${getRandomNumber(0 - diameter, window.innerWidth + diameter)}px`; // Random horizontal position
+    ball.style.top = `${getRandomNumber(0 - diameter, window.innerHeight + diameter)}px`; // Random vertical position
+    ball.style.boxShadow = '0 0 10px 10px rgba(255, 255, 255, 0.3)';
 
-    // Calculate the maximum left and top positions considering ball size
-    const maxLeft = window.innerWidth;
-    const maxTop = window.innerHeight;
+    document.getElementById('ball-container').appendChild(ball);
 
-    ball.style.left = `${getRandom(0, maxLeft)}px`;
-    ball.style.top = `${getRandom(0, maxTop)}px`;
-
-    document.body.append(ball);
-    balls.push(ball);
+    // Move the ball
+    moveBall(ball, diameter / 2);
 }
 
-// Function to create all balls
-function createBalls() {
-    for (let i = 0; i < numBalls; i++) {
-        createBall();
+// Function to move the ball
+function moveBall(ball, r) {
+    const angle = getRandomNumber(0, Math.PI * 2); // Random angle
+    const speed = getRandomNumber(0.1, 1);
+    const radius = r;
+    let dx = Math.cos(angle) * speed; // Horizontal speed component
+    let dy = Math.sin(angle) * speed; // Vertical speed component
+
+    function updatePosition() {
+        const rect = ball.getBoundingClientRect();
+        if (rect.left <= 0 - radius*2) {
+            dx = Math.abs(dx); // Make direction positive if ball hits left edge
+        }
+        if (rect.right >= window.innerWidth + radius*2) {
+            dx = -Math.abs(dx); // Make direction negative if ball hits right edge
+        }
+        if (rect.top <= 0 - radius*2) {
+            dy = Math.abs(dy); // Make direction positive if ball hits left edge
+        }
+        if (rect.bottom >= window.innerHeight + radius*2) {
+            dy = -Math.abs(dy); // Make direction negative if ball hits right edge
+        }
+
+        ball.style.left = `${rect.left + dx}px`;
+        ball.style.top = `${rect.top + dy}px`;
+
+        requestAnimationFrame(updatePosition);
+    }
+
+    updatePosition();
+}
+
+// Function to create initial balls
+function createInitialBalls() {
+    for (let i = 0; i < 4; i++) {
+        createFloatingBall();
     }
 }
 
-// Function to animate balls
-function animateBalls() {
-    balls.forEach(ball => {
-        const toX = getRandom(-20, window.innerWidth / 2);
-        const toY = getRandom(-20, window.innerHeight / 2);
-
-        const maxTranslateX = toX < 0 ? -toX : window.innerWidth;
-        const maxTranslateY = window.innerHeight;
-
-        ball.animate(
-            [
-                { transform: "translate(0, 0)" },
-                { transform: `translate(${Math.min(maxTranslateX, toX)}px, ${Math.min(maxTranslateY, toY)}px)` }
-            ],
-            {
-                duration: (Math.random() + 0.5) * 1000, // Faster animation
-                direction: "alternate",
-                fill: "both",
-                iterations: Infinity,
-                easing: "ease-in-out"
-            }
-        );
-    });
-}
-
+// Function to remove all balls
 function removeBalls() {
-    balls.forEach(ball => ball.remove());
-    balls.length = 0; // Clear the balls array
+    const ballContainer = document.getElementById('ball-container');
+    while (ballContainer.firstChild) {
+        ballContainer.removeChild(ballContainer.firstChild);
+    }
 }
 
-// Event listener for window resize
-window.addEventListener('resize', () => {
+// Function to reset balls
+function resetBalls() {
     removeBalls();
-    createBalls();
-});
+    createInitialBalls();
+}
 
-// Initialize
-createBalls();
-animateBalls();
+// Call the resetBalls function when the reset button is pressed
+const resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', resetBalls);
+
+// Call the createInitialBalls function when the page loads
+createInitialBalls();

@@ -7,23 +7,15 @@ html {
 
 body {
     color: #ffffff;
+    overflow: hidden; /* Prevents balls from affecting scrollbar */
 }
-
-.ball {
-    position: absolute;
-    border-radius: 100%;
-    opacity: 0.3;
-}
-
 
 .container {
+    position: relative;
     display: flex;
     justify-content: center;
-    /* align horizontal */
     align-items: center;
-    /* align vertical */
     height: 100%;
-    /* or any custom height */
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -37,6 +29,13 @@ body {
     margin-bottom: 50vh;
 }
 
+/* Add floating balls */
+.ball {
+    position: absolute;
+    border-radius: 50%; /* Circular shape */
+    z-index: -1; /* Position behind everything else */
+}
+    
 h1 {
     font-size: 4.5em;
     margin-top: 0;
@@ -51,6 +50,20 @@ h2 {
 
 img {
     border-radius: 15px;
+}
+
+button {
+    background: linear-gradient(45deg, rgba(245, 230, 6, 1) 0%, rgba(46, 210, 245, 1) 100%);
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.5em;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 200px;
+    /* Add any additional styles here */
 }
 
 .header {

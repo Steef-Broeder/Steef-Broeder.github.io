@@ -1,8 +1,20 @@
-body {
-    background-color: #F2F2F2;
-    color: #262526;
+html {
+    background: rgb(245, 230, 6);
+    background: linear-gradient(45deg, rgba(245, 230, 6, 1) 0%, rgba(46, 210, 245, 1) 100%);
     font-family: "Futura", sans-serif;
+    height: 100%;
 }
+
+body {
+    color: #ffffff;
+}
+
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.3;
+}
+
 
 .container {
     display: flex;
@@ -33,12 +45,8 @@ h1 {
 
 h2 {
     font-size: 2em;
-    margin-top: 0;
+    margin-top: 0.5em;
     margin-bottom: 0;
-}
-
-a {
-    text-decoration: none;
 }
 
 img {
@@ -46,32 +54,22 @@ img {
 }
 
 .header {
-    margin-bottom: 1em;
+    margin-bottom: 0;
 }
 
 .author {
     font-weight: bold;
-    margin-top: 0;
+    margin-top: 8px;
     margin-bottom: 0;
-}
-
-.panel {
-    border-radius: 10px;
-    transition: background-color 0.2s ease;
-    margin-bottom: 10px;
-
-}
-
-.panel h2 {
-    padding: 6px;
 }
 
 .image-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    border: 4px solid #1E2B33;
     border-radius: 15px;
-    padding: 6px;
+    max-width: 60vh;
 }
 
 .image-container img,
@@ -89,37 +87,44 @@ img {
     }
 }
 
-#post1.panel {
-    background-color: #cfcecf;
-    color: #265672;
+/* LINKS */
+/* unvisited link */
+a:link {
+    color: #732629;
 }
 
-#post1.panel:hover {
-    background-color: #265672;
-    /* Change to the color you want */
+/* visited link */
+a:visited {
+    color: #FFFFFF;
 }
 
-#post2.panel {
-    background-color: #F5E7D3;
-    color: #DB6816;
+/* mouse over link */
+a:hover {
+    color: #712673;
 }
 
-#post2.panel:hover {
-    background-color: #DB6816;
-    /* Change to the color you want */
+/* selected link */
+a:active {
+    color: #FFFFFF;
 }
 
-#post3.panel {
-    background-color: #fff;
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-#post3.panel h2 {
-    background: -webkit-linear-gradient(45deg, rgba(245, 230, 6, 1) 0%, rgba(46, 210, 245, 1) 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
-#post3.panel:hover {
-    background: linear-gradient(45deg, rgba(245, 230, 6, 1) 0%, rgba(46, 210, 245, 1) 100%);
-    /* Change to the color you want */
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #FFF;
 }

@@ -29,7 +29,7 @@ document.querySelector("#onoff").addEventListener("click", () => {
         document.querySelector("#fire").style.opacity = 0;
         fire = false;
     } else {
-        document.querySelector("#fire").style.opacity = 0.75;
+        document.querySelector("#fire").style.opacity = 0.6;
         fire = true;
     }
 });

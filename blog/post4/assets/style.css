@@ -29,7 +29,7 @@ img {
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
-    filter: blur(25px);
+    filter: blur(50px);
     opacity: 0;
 }
 

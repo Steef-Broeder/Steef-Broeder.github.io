@@ -12,3 +12,8 @@ document.getElementById('post3')
   .addEventListener('click', function () {
     window.location.href = 'post3/post3.html';
   });
+
+document.getElementById('post4')
+  .addEventListener('click', function () {
+    window.location.href = 'post4/post4.html';
+  });

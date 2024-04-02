@@ -123,3 +123,13 @@ img {
     background: linear-gradient(45deg, rgba(245, 230, 6, 1) 0%, rgba(46, 210, 245, 1) 100%);
     /* Change to the color you want */
 }
+
+#post4.panel {
+    background-color: #000;
+    color: #fff;
+}
+
+#post4.panel:hover {
+    background-color: #fff;
+    color: #000;
+}

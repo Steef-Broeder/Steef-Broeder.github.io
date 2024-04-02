@@ -5,15 +5,47 @@ body {
     margin: 0px;
 }
 
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 h1 {
     color: white;
     font-size: 5rem;
     font-family: "Space Mono", monospace;
     text-align: center;
-    position: absolute;
     margin-top: 0px;
     margin-bottom: 0px;
-    top: 50%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    z-index: -1;
+    filter: blur(25px);
+    opacity: 0;
+}
+
+button {
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    /* Center horizontally */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }

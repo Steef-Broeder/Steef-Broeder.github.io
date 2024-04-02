@@ -18,6 +18,18 @@ document.querySelector("h1").onmouseover = event => {
             clearInterval(interval);
         } 
 
-        iterations += 1/3;
-    }, 30);
+        iterations += 1/4;
+    }, 40);
 }
+
+
+let fire = false;
+document.querySelector("#onoff").addEventListener("click", () => {
+    if(fire) {
+        document.querySelector("#fire").style.opacity = 0;
+        fire = false;
+    } else {
+        document.querySelector("#fire").style.opacity = 0.75;
+        fire = true;
+    }
+});

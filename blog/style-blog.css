@@ -133,3 +133,13 @@ img {
     background-color: #fff;
     color: #000;
 }
+
+#post5.panel {
+    background-color: #fff;
+    color: #000;
+}
+
+#post5.panel:hover {
+    background-color: #000;
+    color: #fff;
+}

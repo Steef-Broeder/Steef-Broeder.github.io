@@ -17,3 +17,8 @@ document.getElementById('post4')
   .addEventListener('click', function () {
     window.location.href = 'post4/post4.html';
   });
+
+document.getElementById('post5')
+  .addEventListener('click', function () {
+    window.location.href = 'post5/post5.html';
+  });

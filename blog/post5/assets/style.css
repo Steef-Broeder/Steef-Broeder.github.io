@@ -1,0 +1,22 @@
+body {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    color: white;
+    font-size: 5rem;
+    font-family: "Space Mono", monospace;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
